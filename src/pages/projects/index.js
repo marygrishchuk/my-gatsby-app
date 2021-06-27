@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../../components/Layout"
 import * as styles from '../../styles/projects.module.css'
 import { graphql, Link } from "gatsby"
+import {GatsbyImage, getImage} from "gatsby-plugin-image"
 
 const Projects = ({data}) => {
   const projects = data.projects.nodes
@@ -17,6 +18,7 @@ const Projects = ({data}) => {
             projects.map(project => (
               <Link to={'/projects/' + project.frontmatter.slug} key={project.id}>
                 <div>
+                  <GatsbyImage image={getImage(project.frontmatter.thumb)} alt={'project banner'}/>
                   <h3>{project.frontmatter.title}</h3>
                   <p>{project.frontmatter.stack}</p>
                 </div>
@@ -24,7 +26,7 @@ const Projects = ({data}) => {
             ))
           }
         </div>
-        <p>Like what you see? Email me at {contact}</p>
+        <p>You can email me at {contact}</p>
       </div>
     </Layout>
   )
@@ -41,6 +43,11 @@ export const query = graphql`
           slug
           stack
           title
+          thumb {
+            childImageSharp {
+              gatsbyImageData(layout: CONSTRAINED)
+            }
+          }
         }
         id
       }

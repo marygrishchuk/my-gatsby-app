@@ -3,6 +3,8 @@ title: Cards
 stack: React, TypeScript, Redux, redux-thunk & Ant Design
 slug: cards
 date: 2021-05-03T00:00:00Z
+thumb: ../images/thumbs/cards.png
+featuredImg: ../images/featured/cards.png
 ---
 
 **Cards** is a collaboration project designed using *React, TypeScript, Redux, redux-thunk* & *Ant Design* as an app for creating
