@@ -1,0 +1,51 @@
+.postsPage {
+    text-align: center;
+}
+
+.postsPage > h2 {
+    font-size: 3em;
+    margin-top: 80px;
+}
+
+.postsPage > h3 {
+    font-size: 2em;
+    font-weight: 400;
+}
+
+.posts {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 80px 20px;
+}
+
+.post {
+    border: 1px solid #cccccc;
+    width: 450px;
+    height: fit-content;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 5px;
+    background-color: #f8f8f8;
+}
+
+.post * {
+    text-align: left;
+    color: #646262;
+}
+
+.postHeader {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-gap: 10px;
+}
+
+.avatar {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.post p {
+    margin-top: 4px;
+}
+

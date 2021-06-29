@@ -20,6 +20,7 @@ export default function Navbar() {
         <Link to="/">Home</Link>
         <Link to="/about">About me</Link>
         <Link to="/projects">Projects</Link>
+        <Link to="/posts">Posts</Link>
       </div>
     </nav>
   )
